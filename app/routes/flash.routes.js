@@ -1,0 +1,21 @@
+const FlashOrder = require("../controllers/flash.controller");
+module.exports = app => {
+    const FlashOrder = require("../controllers/flash.controller");
+    app.post("/flash/createOrder", FlashOrder.createOrder);
+    app.post("/flash/cancelOrder", FlashOrder.cancelOrder);
+    app.post("/flash/trackingOrder", FlashOrder.trackingOrder);
+    app.post("/flash/printSmalllabel", FlashOrder.printSmalllabel);
+    app.post("/flash/printBiglabel", FlashOrder.printBiglabel);
+    app.post("/flash/estimateRate", FlashOrder.estimateRate);
+    app.post("/flash/callwebhook", FlashOrder.callFlashWebHook);
+    app.post("/flash/collectdata", FlashOrder.getFlashWebHookData);
+    app.post("/flash/callCourier", FlashOrder.callCourier);
+    app.post("/flash/getNotify", FlashOrder.getNotify);
+    app.post("/flash/cancelNotify", FlashOrder.cancelNotify);
+    app.post("/flash/getDataCourier", FlashOrder.getDataCourier);
+    app.post("/flash/setDataCourier", FlashOrder.setDataCourier);
+    app.post("/flash/modifyOrder", FlashOrder.modifyOrder);
+    app.post("/flash/autoEstimateRate", FlashOrder.autoEstimateRate);
+    app.post("/flash/label/download", FlashOrder.DownloadSmallLabel);
+    app.post("/flash/big_label/download", FlashOrder.DownloadSmallLabel);
+};

@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  njs-backend:
+    #build: .
+    #version old
+    #image: git.inet.co.th:5555/supachok.ya/e-pro-support:1.0.0-ProdUPS
+    image: git.inet.co.th:5555/supachok.ya/e-pro-support:1.0.1-ProdUPS
+    restart: always
+    network_mode: host
+    volumes:
+      - ./logs:/usr/src/app/logs
+      - ./public:/usr/src/app/public
+#    ports:
+#      - '3000:3000'
+#    networks:
+#      - njsnetwork
+
